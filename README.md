@@ -1,19 +1,42 @@
 # Django and Vue 3 integration
 
+This template contains an integration betweeen Django 3.2.12 with Vue 3 CLI. This integration was possible thanks to the [webpack-bundler-tracker](https://www.npmjs.com/package/webpack-bundle-tracker ) and [django-webpack-loader](https://pypi.org/project/django-webpack-loader/) dependencies.
+
+Also it contains another packages to use with Django, like Django Rest Framework and Corsheaders, while Vue 3 already contains Router and Vuex.
+
 The folder structure for the project is as follows
 
-|- frontend (Here save the Vue 3 project)
-|- main (Django main folder)
-|- templates (Django templates)
-|---- bd.sqlite3 (Default Django database )
-|---- manage.py (File to run django)
-|---- requirements.txt (packages for the py virtual enviroment)
-|---- README.md
-|---- .gitignore
+- frontend (Here save the Vue 3 project)
+- main (Django main folder)
+- templates (Django templates)
+  - bd.sqlite3 (Default Django database )
+  - manage.py (File to run django)
+  - requirements.txt (packages for the py virtual enviroment)
+  - README.md
+  - .gitignore
 
-## Virtual Enviroment for Python
+# Installation
 
-To create the virtual enviroment in python use:
+To install this project you need install the Vue 3 project and later the Virtual Enviroment for Django project.
+
+
+## Install Vue 3 Project
+
+To initialize the Vue 3 project, you need initialize the node_modules folder. To do this, you need ubicated in the path of the project:
+
+`cd frontend`
+
+`npm install -y`
+
+and to run Vue 3 project, run the command:
+
+`npm run serve`
+
+
+
+## Virtual Enviroment for Python and Install Django 3.2.12
+
+The first thing to do is to be located in the path where the manage.py file is located, and then you can create virtual enviroment in python use:
 
 `python -m virtualenv .venv`
 
@@ -38,31 +61,3 @@ Some important packages included in this project are:
   - django-rest-framework
   - psycopg2
   - django-webpack-loader
-
-
-## Initialize Vue 3 Project
-
-To initialize the Vue 3 project, you need initialize the node_modules folder. To do this, you need ubicated in the path of the project:
-
-`cd frontend`
-`npm install -y`
-
-and to run Vue 3 project, run the command:
-
-`npm run serve`
-
-
-# Some dependences to integrate Django and Vue 3
-
-
-Debe instalarse el webpack bundle y loader en npm y python.
-
-- Npm
-https://www.npmjs.com/package/webpack-bundle-tracker 
-
-npm install --save-dev webpack-bundle-tracker
-
-- Python
-https://pypi.org/project/django-webpack-loader/
-
-pip install django-webpack-loader
